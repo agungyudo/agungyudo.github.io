@@ -2,20 +2,108 @@
 <html>
 <head>
 	<title>AI JOB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="ai.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<!-- Side Bar -->
-<div class="sidebar">
+<div class="container">
+<div class="sidebar"> <!-- Side Bar -->
 <img src="kyubi.png" width="230px" class="mb-2">
 <h2 class="mt-4"><strong>Welcome Back!</strong></h2>
-<p class="ml-5*2">Kerjain open done job yuk!</p>
-<button class="btn btn-success" style="border: 0;">Gas!</button>
-</div>
-<!-- End of Side Bar -->
-<!-- Login and Register -->
+<p>Kerjain open done job yuk!</p>
+<button class="btn btn-success" style="border: 0;" id="gas">Gas!</button>
+</div> <!-- End of Side Bar -->
+</div> <!-- End of Message -->
+<div class="login">
+<button class="btn btn-success" style="border: 0"; id="button1">AI JOB</button>
+<button class="btn btn-primary" style="background-color: rgb(42, 196, 234); border: 0;" id="button2">Login</button>
+<button class="btn btn-danger" style="background-color: rgb(246, 101, 60); border: 0"; id="button3">Register</button>
+</div> <!-- End of Login -->
+<div class="msg-container">
+	<div id="slider"> 
+		<div class="msg-col" id="deskripsi">
+			<img class="m" src="image.png" width="320px">
+			<p class="mt-2"><strong>AI Job</strong> adalah sebuah aplikasi web yang dibuat oleh Agung & Raihan dengan tujuan
+			untuk mempermudah SAI dalam menginput pekerjaan. AI Job juga bisa digunakan team teaching untuk 
+			melihat pekerjaan yang sudah dilalui oleh Anak didiknya.
+			</p>
+			<button type="submit" class="btn btn-primary" style="background-color: #66CDAA; border: none;">See more...</button>
+		</div>
+		<div class="msg-col" id="tiga">
+			<form>
+				<div class="form-group">
+				  <label for="exampleInputEmail1">Email</label>
+				  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				</div>
+				<div class="form-group">
+				  <label for="exampleInputPassword1">Password</label>
+				  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				</div>
+				<div class="form-check">
+				</div>
+				<button type="submit" class="btn btn-primary" style="background-color: #66CDAA; border: none;"><a href="home.html"></a>Submit</a></button>
+				<hr>
+				<button type="submit" class="btn btn-primary" style="background-color: #c33b2b; border: none;" id="googlebutton"><i class="fa fa-google"></i> Login with Google</button>
+		</div>	
+		<div class="msg-col">
+			<form>
+			  <div class="form-group">
+				<label for="exampleInputEmail1">Username</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+				</div>
+			  <div class="form-group">
+				<label for="exampleInputEmail1">Email</label>
+				<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+			  </div>
+			  <div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			  </div>
+			  <button type="submit" class="btn btn-primary" style="background-color: #66CDAA; border: none;"><a href="home.html"></a>Submit</a></button>
+	</div>
+	</div>
+	</div>
+	</div> <!-- End of Message Container -->
+</div> <!-- End of Container -->
+
+<script>
+var slider = document.getElementById('slider');
+var active = document.getElementById('active');
+var line1 = document.getElementById('button1');
+var line2 = document.getElementById('button2');
+var line3 = document.getElementById('button3');
+var controller = document.getElementById('controller');
+const regist = document.getElementById('regist');
+const gas = document.getElementById('gas');
 
 
+line1.onclick = function(){
+	slider.style.transform = 'translateX(0)';
+}
+line2.onclick = function(){
+	slider.style.transform = 'translateX(-33.1%)';
+}
+line3.onclick = function(){
+	slider.style.transform = 'translateX(-66.6%)';
+}
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+gas.onclick = function(){
+	slider.style.transform = 'translateX(-66.6%)'
+}
+
+gas.addEventListener('click', function(){
+
+});
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</script>
 </body>
 </html>
