@@ -50,7 +50,7 @@ body{
 
 /* Message */
 .msg-container{
-	width: 513px;
+	width: 510px;
 	height: 400px;
 	position: absolute;
 	left: 39%;
@@ -105,7 +105,7 @@ body{
 
 
 /* Mobile */
-@media only screen and (max-width: 767px) {
+@media (min-width: 321px) and (max-width: 736px) {
 	body{
 	 background-color: #66CDAA;
 	 background-size: cover;
@@ -175,4 +175,5 @@ body{
 	}
 
  }
+
 
