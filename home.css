@@ -1,0 +1,28 @@
+body{
+	background-color: #f0f0f0;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100%;
+}
+h1{
+    text-align: center;
+}
+.search{
+	position: relative;
+	left: 23%;
+}
+#button{
+	position: relative;
+	top: -39px;
+	left: 220px;
+}
+
+/* Mobile */
+@media (min-width: 321px) and (max-width: 425px) {
+	.search{
+		position: relative;
+		left: 20px;
+		width: 200px;
+	}
+}
