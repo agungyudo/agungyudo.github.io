@@ -14,15 +14,25 @@ h1{
 }
 #button{
 	position: relative;
-	top: -39px;
-	left: 220px;
+	left: 10px;
 }
 
 /* Mobile */
-@media (min-width: 321px) and (max-width: 425px) {
+@media (min-width: 321px) and (max-width: 736px) {
 	.search{
 		position: relative;
 		left: 20px;
 		width: 200px;
+	}
+	#button{
+		position: relative;
+		left: 230px;
+		top: -38px;
+	}
+	.isi{
+		margin-left: 15px;
+	}
+	body h1{
+		margin-left: 15px;
 	}
 }
