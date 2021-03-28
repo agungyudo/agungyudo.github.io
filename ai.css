@@ -152,7 +152,7 @@ body{
 		height: 400px;
 		position: absolute;
 		left: 3%;
-		top: 62.5%;
+		top: 63.5%;
 		transform: translateY(-50%);
 		overflow: hidden;
 	 }
@@ -232,7 +232,7 @@ body{
 		   height: 400px;
 		   position: absolute;
 		   left: 3%;
-		   top: 55%;
+		   top: 60%;
 		   transform: translateY(-50%);
 		   overflow: hidden;
 		}
@@ -265,7 +265,7 @@ body{
 	}
 
 	/* Mobile (Ukuran Kecil) */
-		@media (max-width:320px){
+		@media (max-width:360px){
 			body{
 				background-color: #66CDAA;
 				background-size: cover;
