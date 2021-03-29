@@ -9,8 +9,7 @@ h1{
     text-align: center;
 }
 .search{
-	position: relative;
-	left: 23%;
+	margin-left: 23%;
 }
 #button{
 	position: relative;
@@ -20,8 +19,7 @@ h1{
 /* Mobile */
 @media (min-width: 321px) and (max-width: 736px) {
 	.search{
-		position: relative;
-		left: 20px;
+		margin-left: 5%;
 		width: 200px;
 	}
 	#button{
