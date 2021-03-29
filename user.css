@@ -1,0 +1,37 @@
+#karakter{
+    border-radius: 80%;
+}
+
+body {
+  line-height: 1.25;
+}
+
+#table{
+    display: none;
+    transition: 1;
+}
+table{
+    margin-left: 10%;
+    border-collapse:collapse;
+    font:normal normal 12px Verdana,Arial,Sans-Serif;
+    color:#333333;
+}
+table th {
+    background: rgb(41, 168, 130);
+    color: white;
+    font-weight:bold;
+    font-size:16px;
+    text-align: center;
+}
+table th,
+table td {
+    vertical-align:top;
+    padding:5px 10px;
+    border:1px solid #696969;
+}
+table tr {
+    background:#F5FFFA;
+}
+table tr:nth-child(even) {
+    background:#F0F8FF;
+}
