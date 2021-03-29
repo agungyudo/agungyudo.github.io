@@ -151,7 +151,7 @@ body{
 		width: 350px;
 		height: 400px;
 		position: absolute;
-		left: 3%;
+		left: 2%;
 		top: 63.5%;
 		transform: translateY(-50%);
 		overflow: hidden;
@@ -232,7 +232,7 @@ body{
 		   height: 400px;
 		   position: absolute;
 		   left: 3%;
-		   top: 90%;
+		   top: 55%;
 		   transform: translateY(-50%);
 		   overflow: hidden;
 		}
