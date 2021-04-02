@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="user.css">
     <title>User</title>
@@ -12,27 +13,41 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-dark mb-2" style="background-color: rgb(41, 168, 130);">
-    <strong><a href="home.html" style="font-size: 1rem; margin-right: 15px; color: azure; text-decoration: none;"><i class="bi bi-arrow-bar-left"></i>Home</a></strong>
-    <h4 class="text-white pt-2"><strong>PROFILE</strong></h4>
+    <div class="dropdown">
+        <a class="dropdown-toggle" href="#" srole="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+        style="color: white; font-size: 30px;">
+        </a>  
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="width: 250px; height: 175px; 
+        background-color: rgb(41, 168, 130); font-size: 15px; border: 2px solid white;">
+          <li><a class="dropdown-item pt-2" href="home.html" style="color: white;"><strong><i class="bi bi-house-door-fill text-white mr-2"></i>Home</strong></a></li>
+          <hr>
+          <li><a class="dropdown-item" href="#" style="color: white;"><strong><i class="bi bi-people-fill text-white mr-2"></i>Groups</strong></a></li>
+          <hr>
+          <li><a class="dropdown-item" href="#" style="color: white;"><strong><i class="bi bi-hand-thumbs-up-fill text-white mr-2"></i>Rank</strong></a></li>
+        </ul>
+      </div>
+    <h4 class="text-white mt-2 ml-5 pl-1"><strong>PROFILE</strong></h4>
+    
     <strong class="text-white"><a href="AI.html" style="text-decoration: none; color: white;"><i class="bi bi-door-closed"></i> Logout</a></strong>
+
     </nav>
     <!-- Akun -->
     <div class="text-center mt-3">
-        <img src="anime.jpeg" class="rounded-circle" width="300px" alt="">
+        <img src="agung.jpg"  width="220px" alt="" id="karakter">
         <h4 class="mt-3"><strong>Agung Yudo Ardianto</strong></h4>
         <strong><p>ABC Move (180)</p></strong>
-        <button class="btn btn-success mt-2" id="button">Open</button>
+        <button class="btn btn-success mt-2" id="button">Close</button>
     </div>
     <!-- End of Akun -->
     <!-- Table -->
     <div class="table" id="table">
-    <table width="80%" class="mt-4">
+    <table width="90%" class="mt-4">
         <tr> <th>No</th><th>Job</th> <th>Status</th><th>Tanggal</th></tr>
         <tr> <td>1</td><td>Membuat Form Signy</td> <td>Done</td> <td></td></tr>
         <tr> <td>2</td><td>Belajar Menggambar</td> <td>Done</td>  <td></td></tr>
         <tr> <td>3</td><td>Bermain Titit</td> <td>Done</td>  <td></td></tr>
         <tr> <td>4</td><td>Heleh kintil</td> <td>Done</td> <td></td></tr>
-        <tr> <td>5</td><td>Hehehe</td> <td>Done</td>  <td></td></tr>
+        <tr> <td>5</td><td>Hehehe</td> <td>Done</td><td></td></tr>
     </table>          
 </div>  
 <!-- End of Table -->
@@ -44,8 +59,17 @@
     const button = document.getElementById('button')
 
     button.addEventListener('click',function(){
-        table.style.display = 'block'
+      
+        table.classList.toggle("tabletutup");
+
+        if (button.innerHTML === "Close") {
+        button.innerHTML = "Open";
+        } else {
+        button.innerHTML = "Close";
+  }
     });
+
+    
 
 
 </script>
