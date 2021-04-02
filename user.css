@@ -1,19 +1,25 @@
 #karakter{
-    border-radius: 80%;
+    border-radius: 100%;
 }
 
 body {
   line-height: 1.25;
 }
-#table{
+
+#table i{
+    margin-left: 88%;
+}
+.tabletutup{
     display: none;
-    transition: 1;
 }
 table{
-    margin-left: 10%;
+    margin-left: 5%;
     border-collapse:collapse;
     font:normal normal 12px Verdana,Arial,Sans-Serif;
     color:#333333;
+}
+.dropdown a:hover{
+    background-color: rgb(41, 168, 130);
 }
 table th {
     background: rgb(41, 168, 130);
@@ -26,7 +32,7 @@ table th,
 table td {
     vertical-align:top;
     padding:5px 10px;
-    border:1px solid #696969;
+    border:1px solid #eaeaea;
 }
 table tr {
     background:#F5FFFA;
