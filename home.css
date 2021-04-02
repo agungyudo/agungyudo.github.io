@@ -8,6 +8,12 @@ body{
 h1{
     text-align: center;
 }
+.dropdown a:hover{
+    background-color: rgb(41, 168, 130);
+}
+h4{
+	padding-left: 10%;
+}
 .search{
 	margin-left: 23%;
 }
@@ -32,5 +38,8 @@ h1{
 	}
 	body h1{
 		margin-left: 15px;
+	}
+	h4{
+		font-size: 18px;
 	}
 }
