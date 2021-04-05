@@ -61,7 +61,7 @@ table tr:nth-child(even) {
 /* Mobile */
 @media (min-width: 321px) and (max-width: 736px) {
     body{
-        background-color: #E0FFFF;
+        background-image: url(assets/background2.jpg);
         background-size: cover;
         background-attachment: fixed;
     }
