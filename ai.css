@@ -12,7 +12,7 @@ body{
 .sidebar{
 	background-color: #66CDAA;
 	width: 400px;
-	height: 680px;
+	height: 578px;
 	color: white;
 }
 .sidebar img{
@@ -89,20 +89,6 @@ body{
 #tiga{
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Mobile (Ukuran Umum) */
  @media screen and (max-width:400px) {
