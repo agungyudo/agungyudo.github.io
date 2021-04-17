@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AI JOB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+	<div class="col-lg-4 col-md-4 bg-danger" style="height: 577px;" id="sidebar">		
+	</div>
+	<div class="col-lg-7 col-md-7 ml-5" style="margin-top: 10%;" id="semuaButton">
+		<button class="btn btn-success mr-2" id="button1">AI JOB</button>
+		<button class="btn btn-info mr-2" id="button2">Login</button>
+		<button class="btn btn-warning" id="button3">Visitor</button>
+
+		<div class="msg-container">
+		<div id="slider"> 
+		<div class="msg-col" id="deskripsi">
+			<img class="mt-1" src="./assets/image.png" width="320px">
+			<p class="mt-2"><strong>AI Job</strong> adalah sebuah aplikasi web yang dibuat oleh Agung & Raihan <br> 
+			dengan tujuan untuk mempermudah SAI dalam menginput pekerjaan.<br> 
+			AI Job juga bisa digunakan team teaching untuk melihat pekerjaan <br>
+			yang sudah dilalui oleh Anak didiknya.
+			</p>
+			<button type="submit" class="btn btn-primary" style="background-color: #46a786; border: none;">See more...</button>
+		</div>
+		<div class="msg-col" id="dua">
+			<form>
+				<div class="form-group">
+				  <label for="exampleInputEmail1">Email</label>
+				  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+				</div>
+				<div class="form-group">
+				  <label for="exampleInputPassword1">Password</label>
+				  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+				</div>
+				<div class="form-check">
+				</div>
+				<button type="submit" class="btn btn-primary" style="background-color: #46a786; border: none;"><a href="user.html">Login <i class="bi bi-box-arrow-in-right"></i></a></button>
+				<hr>
+				<button type="submit" class="btn btn-primary" style="background-color: #c33b2b; border: none;" id="googlebutton"><i class="fa fa-google"></i> Login with Google</button>
+		</div>	
+		<div class="msg-col" id="tiga">
+			<form>
+			 <div class="form-group">
+			 <label>Nama</label>
+			 <input type="input" class="form-control" id="exampleInputEmail1" placeholder="Nama Lengkap">
+			 </div>
+			 <div class="form-group">
+			 <label for="exampleInputEmail1">Institut</label>
+			 <input type="input" class="form-control" id="exampleInputEmail1" placeholder="Nama Institut">
+			 </div>
+			 <div class="form-group">
+			 <label for="exampleInputPassword1">Email</label>
+			 <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+			 </div>
+			 <button type="submit" class="btn btn-primary" style="background-color: #46a786; border: none;"><a href="home.html"></a>Submit</a></button>
+	</div>
+	</div>
+	</div>
+	</div> <!-- End of Message Container -->
+</div>
+
+</body>
+<script>
+var slider = document.getElementById('slider');
+var active = document.getElementById('active');
+var line1 = document.getElementById('button1');
+var line2 = document.getElementById('button2');
+var line3 = document.getElementById('button3');
+var controller = document.getElementById('controller');
+const regist = document.getElementById('regist');
+const gas = document.getElementById('gas');
+
+
+line1.onclick = function(){
+	slider.style.transform = 'translateX(0)';
+}
+line2.onclick = function(){
+	slider.style.transform = 'translateX(-33.1%)';
+}
+line3.onclick = function(){
+	slider.style.transform = 'translateX(-66.6%)';
+}
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+</script>
+</html>
