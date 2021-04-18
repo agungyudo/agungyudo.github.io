@@ -31,10 +31,11 @@ table th {
     background: rgb(41, 168, 130);
     color: white;
     font-weight:bold;
-    font-size:16px;
+    font-size:15px;
     text-align: center;
 }
 table td {
+    font-size: 15px;
     vertical-align:top;
     padding:5px 10px;
     border:1px solid #eaeaea;
@@ -47,7 +48,7 @@ table tr:nth-child(even) {
 }
 /* Input CSS */
 #input {
-    margin-left: 25%;
+    margin-left: 33%;
 }
 #input input{
     height: 33px;
@@ -61,7 +62,7 @@ table tr:nth-child(even) {
 /* Mobile */
 @media (min-width: 321px) and (max-width: 736px) {
     body{
-        background-image: url(assets/background2.jpg);
+        background-color: #E0FFFF;
         background-size: cover;
         background-attachment: fixed;
     }
