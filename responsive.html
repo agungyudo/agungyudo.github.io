@@ -12,18 +12,18 @@
 <div class="container-fluid">
 <div class="row">
 	<!-- Sidebar -->
-	<div class="col-lg-4 col-md-4 bg-danger" style="height: 577px;" id="sidebar"> 
+	<div class="col-lg-4 col-md-4" id="sidebar"> 
 	<div class="pembungkusSidebar" style="margin-top: 25%;"> <!-- Pembungkus Sidebar -->
-	<img class="mx-auto d-block" src="./assets/kyubi.png" width="230px">
+	<img class="mx-auto d-block" src="./assets/kyubi.png" width="235px">
 	<h2 class="mt-4 text-center text-white"><strong>Welcome Back!</strong></h2>
 	<p class="text-center text-white">Kerjain open done job yuk!</p>
 	<button class="btn btn-success" id="gas">Gas!</button>
 	</div> <!-- End of Pembungkus Sidebar -->
 	</div> <!-- End of ID Sidebar -->
-	<div class="col-lg-7 col-md-7 ml-5" style="margin-top: 9%;" id="semuaButton">
+	<div class="col-lg-7 col-md-7 ml-5" style="margin-top: 9.5%;" id="semuaButton">
 		<button class="btn btn-success mr-2" id="button1">AI JOB</button>
 		<button class="btn btn-info mr-2" id="button2">Login</button>
-		<button class="btn btn-warning" id="button3">Visitor</button>
+		<button class="btn btn-danger text-white" style="background-color: rgb(246, 101, 60);" id="button3">Visitor</button>
 
 		<div class="msg-container">
 		<div id="slider"> 
@@ -32,9 +32,9 @@
 			<p class="mt-2"><strong>AI Job</strong> adalah sebuah aplikasi web yang dibuat oleh Agung & Raihan <br> 
 			dengan tujuan untuk mempermudah SAI dalam menginput pekerjaan.<br> 
 			AI Job juga bisa digunakan team teaching untuk melihat pekerjaan <br>
-			yang sudah dilalui oleh Anak didiknya.
+			yang sudah dilalui oleh Anak didiknya <a href="www.google.com" style="color: blue">Google</a>.
 			</p>
-			<button type="submit" class="btn btn-primary" style="background-color: #46a786; border: none;">See more...</button>
+			<button type="submit" class="btn btn-success" style="background-color: #46a786; border: none;">See more...</button>
 		</div>
 		<div class="msg-col" id="dua">
 			<form>
@@ -52,7 +52,7 @@
 				<hr>
 				<button type="submit" class="btn btn-primary" style="background-color: #c33b2b; border: none;" id="googlebutton"><i class="fa fa-google"></i> Login with Google</button>
 		</div>	
-		<div class="msg-col" id="tiga">
+		<div class="msg-col" id="tiga"> 
 			<form>
 			 <div class="form-group">
 			 <label>Nama</label>
@@ -68,21 +68,14 @@
 			 </div>
 			 <button type="submit" class="btn btn-primary" style="background-color: #46a786; border: none;"><a href="home.html"></a>Submit</a></button>
 	</div>
-	</div>
-	</div>
 	</div> <!-- End of Message Container -->
-</div> <!-- End of Container Fluid -->
-
+</div> 
+<!-- End of Container Fluid -->
 </body>
 <script>
-var slider = document.getElementById('slider');
-var active = document.getElementById('active');
 var line1 = document.getElementById('button1');
 var line2 = document.getElementById('button2');
 var line3 = document.getElementById('button3');
-var controller = document.getElementById('controller');
-const regist = document.getElementById('regist');
-const gas = document.getElementById('gas');
 
 
 line1.onclick = function(){
@@ -93,9 +86,6 @@ line2.onclick = function(){
 }
 line3.onclick = function(){
 	slider.style.transform = 'translateX(-66.6%)';
-}
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
 }
 </script>
 </html>
