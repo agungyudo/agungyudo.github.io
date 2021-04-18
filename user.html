@@ -48,17 +48,21 @@
     <br>
     <br>
   <div id="input" v-if="table"> <!-- Input -->
-    <input type="text" placeholder=" Nama Job"><input type="text" placeholder=" Status"><input type="text" placeholder=" Bukti / Link">
-    <button class="btn btn-success">Input</button>
+    <input type="text" placeholder=" Nama Job" v-model="namaJob"><input type="text" placeholder=" Link Bukti" v-model="link">
+    <button class="btn btn-success" @click="submitJobs">Input</button>
     </div> <!-- End of Input -->
     <table width="90%" id="tablenya" class="mt-4" v-if="table">
-        <tr><th>No</th><th>Job</th> <th>Status</th><th>Tanggal</th></tr>
+        <tr>
+          <th>No</th>
+          <th>Nama Job</th>
+          <th>Bukti</th>
+        </tr>
       <tbody>
-        <tr><td>1</td><td>Membuat Form Signy</td> <td>Done</td> <td></td></tr>
-        <tr><td>2</td><td>Attendx</td> <td>Done</td>  <td></td></tr>
-        <tr><td>3</td><td>Belajar Vue</td> <td>Done</td>  <td></td></tr>
-        <tr><td>4</td><td>Belajar Bootstrap</td> <td>Done</td> <td></td></tr>
-        <tr><td>5</td><td>Ngopi</td> <td>Done</td><td></td></tr>
+        <tr v-for="job in jobs">
+          <td>{{ job.id }}</td>
+          <td>{{ job.namaJob }}</td>
+          <td><a href="job.link">{{ job.link }}</a></td>
+        </tr>
       </tbody>
     </table>      
 </div>  
