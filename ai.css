@@ -280,3 +280,38 @@ body{
 	position: fixed;
 	}
 	
+	@media (min-width:414px) and (max-width:470px){
+
+		#sidebar{
+			height: 100%;
+		}
+		.msg-container{
+		width: 510px;
+		height: 400px;
+		left: 16%;
+		top: 440px;
+		transform: translateY(-50%);
+		overflow: hidden;
+		position: fixed;
+		}
+		#semuaButton{
+		top: 170px;
+		left: 30px;
+		position: fixed;
+		}
+		.msg-col{
+		margin-top: 1.3%;
+		width: 513px;
+		height: 280px;
+		}
+		.msg-col p{
+			font-family: lato;
+			color: black;
+			font-size: 10px;
+			line-height: 25px;
+		}
+		}
+		.form-group{
+			width: 62%;
+		}
+	
