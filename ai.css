@@ -30,7 +30,7 @@ body{
 	line-height: 25px;
 }
 #sidebar{
-	height: 577px; 
+	height: 100vh; 
 	background-color: #66CDAA;
 	border-top-right-radius: 17px;
 	border-bottom-right-radius: 17px;
@@ -267,3 +267,16 @@ body{
 	.form-group{
 		width: 62%;
 	}
+
+/* Mobile Ukuran laptop */
+@media (min-width:768px) and (max-width:1700px){
+	.msg-container{
+	width: 510px;
+	height: 400px;
+	left: 9%;
+	top: 220px;
+	transform: translateY(-50%);
+	overflow: hidden;
+	position: fixed;
+	}
+	
