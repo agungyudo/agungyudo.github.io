@@ -53,9 +53,6 @@ body{
 		height: 120px;
 		margin-left: -10px;
 	}
-	#lastCol{
-		margin-top: 20px;
-	}
 	.card{
 		width: 240px;
 	}
@@ -67,5 +64,8 @@ body{
 	}
 	.send-message{
 		font-size: 7.3px;
+	}
+	#lastCol{
+		display: none;
 	}
 }
