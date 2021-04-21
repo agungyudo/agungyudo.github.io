@@ -1,4 +1,5 @@
 body{
+	background-image: url(./assets/grey.jpg);
 	font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -43,17 +44,21 @@ body{
 
 
 @media (min-width:200px) and (max-width:576px){
-	#sidebar{
-		height: 470px;
-	}
 	.item-sidebar, a{
 		display: inline-block;
-		margin-top: -20px;
+		font-size: 12px;
 	}
 	.contact{
 		height: 130px;
 	}
 	#lastCol{
 		margin-top: 20px;
+	}
+	.card{
+		width: 210px;
+		margin-left: 10px;
+	}
+	#kyubi{
+		width: 110px;
 	}
 }
