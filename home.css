@@ -49,16 +49,23 @@ body{
 		font-size: 12px;
 	}
 	.contact{
-		height: 130px;
+		width: 80px;
+		height: 120px;
+		margin-left: -10px;
 	}
 	#lastCol{
 		margin-top: 20px;
 	}
 	.card{
-		width: 210px;
-		margin-left: 10px;
+		width: 240px;
 	}
 	#kyubi{
-		width: 110px;
+		width: 90px;
+	}
+	#contactText{
+		font-size: 10px;
+	}
+	.send-message{
+		font-size: 7.3px;
 	}
 }
