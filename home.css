@@ -37,6 +37,9 @@ body{
 #top1{
 	border-radius: 50%;
 }
+#leaderboard-img {
+	border-radius: 50%;
+}
 
 
 @media (min-width:200px) and (max-width:576px){
