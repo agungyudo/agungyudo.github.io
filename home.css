@@ -1,5 +1,6 @@
 body{
-	background-image: url(./assets/grey.jpg);
+	background-color: #eff7f8;
+	background-size: cover;
 	font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -17,6 +18,18 @@ body{
   overflow: auto;
 }
 
+ul a{
+	transition: 0.5s;
+	border-radius: 20px;
+}
+
+ul a:hover {
+border-radius: 20px;
+width: 100%;
+background-color: lightblue;
+color: white;
+}
+
 .item-sidebar, a {
   display: block;
   color: black;
@@ -32,6 +45,7 @@ body{
 }
 
 #quotes{
+	background-color: white;
 	border-radius: 30px;
 }
 
@@ -40,6 +54,16 @@ body{
 }
 #leaderboard-img {
 	border-radius: 50%;
+}
+
+#sidebar{
+	border-top-right-radius: 17px;
+	border-bottom-right-radius: 17px;
+}
+
+#lastCol{
+	border-top-left-radius: 17px;
+	border-bottom-left-radius: 17px;
 }
 
 
