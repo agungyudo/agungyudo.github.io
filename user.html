@@ -13,7 +13,7 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-dark mb-2" style="background-color: rgb(41, 168, 130); height: 52px;">
+  <nav class="navbar navbar-dark mb-2" style="background-color: #089bab; height: 52px;">
     <div class="dropdown">
         <a class="dropdown-toggle" href="#" srole="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
         style="color: white; font-size: 30px;">
@@ -43,13 +43,13 @@
     <!-- End of Akun -->
     <!-- Table -->  
     <div class="table" id="table">
-    <button class="btn btn-success mt-2" id="button" @click="button" v-if='!table'>Open</button>
+    <button class="btn btn-info mt-2" id="button" @click="button" v-if='!table'>Open</button>
     <button class="btn btn-danger mt-2" id="button" @click="button" v-else='table'>Close</button>
     <br>
     <br>
   <div id="input" v-if="table"> <!-- Input -->
-    <input type="text" placeholder=" Nama Job" v-model="namaJob"><input type="text" placeholder=" Link Bukti" v-model="link">
-    <button class="btn btn-success" @click="submitJobs">Input</button>
+    <input type="text" placeholder=" Nama Job" v-model="namaJob" v-on:keyup.enter="submitJobs"><input type="text" placeholder=" Link Bukti" v-model="link" v-on:keyup.enter="submitJobs">
+    <button class="btn btn-info" @click="submitJobs">Input</button>
     </div> <!-- End of Input -->
     <table width="90%" id="tablenya" class="mt-4" v-if="table">
         <tr>
@@ -58,7 +58,7 @@
           <th>Bukti</th>
         </tr>
       <tbody>
-        <tr v-for="job in jobs">
+        <tr v-for="job in jobs" :key="job.id">
           <td>{{ job.id }}</td>
           <td>{{ job.namaJob }}</td>
           <td><a href="job.link">LINK</a></td>
