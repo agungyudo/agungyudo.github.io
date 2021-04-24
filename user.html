@@ -7,235 +7,66 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="user.css">
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <title>User</title>
 </head>
 <body>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2 col-sm-4 col-3" style="background-color:  #089bab; box-shadow: 0 0 7px 2px #00BFFF;" id="sidebar">
-      <div class="kiri">
-        <div class="d-flex justify-content-center mt-2"><img src="./assets/kyubi.png" style="max-width: 9em" id="kyubi"></div>
-        <div class="mt-3 d-flex justify-content-center" id="item-sidebar">
-          <ul class="nav flex-column">
-          <li class="nav-item mb-4">
-            <a class="nav-link active" aria-current="page" href="#"><i class="bi bi-border-all tex" id="linkHome"></i> Home</a>
-          </li>
-          <li class="nav-item mb-4">
-            <a class="nav-link" href="#"><i class="bi bi-person-fill"></i> Profile</a>
-          </li>
-          <li class="nav-item mb-4">
-            <a class="nav-link" href="#"><i class="bi bi-people-fill"></i> Groups</a>
-          </li>
-          <li class="nav-item mb-4">
-            <a class="nav-link" href="#"><i class="bi bi-door-closed"></i> Logout</a>
-          </li>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark mb-2" style="background-color: rgb(41, 168, 130); height: 52px;">
+    <div class="dropdown">
+        <a class="dropdown-toggle" href="#" srole="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
+        style="color: white; font-size: 30px;">
+        </a>  
+        <ul class="dropdown-menu mt-1" aria-labelledby="dropdownMenuLink" style="width: 100px; height: 179px; 
+        background-color: rgb(41, 168, 130); font-size: 15px; margin-left: -17px; margin-top: 5px; border-radius: 0; border: 0px;">
+          <li><a class="dropdown-item pt-2" href="home.html" style="color: white;"><strong><i class="bi bi-house-door-fill text-white mr-2"></i>Home</strong></a></li>
+          <hr>
+          <li><a class="dropdown-item" href="#" style="color: white;"><strong><i class="bi bi-people-fill text-white mr-2"></i>Groups</strong></a></li>
+          <hr>
+          <li><a class="dropdown-item" href="#" style="color: white;"><strong><i class="bi bi-hand-thumbs-up-fill text-white mr-2"></i>Rank</strong></a></li>
         </ul>
-        </div> 
-        <hr>
-        <div class="contact text-center text-white mt-3">
-          <br>
-           <b class="text-dark" id="contactText">Contact Us</b>
-           <br>
-           <br>
-           <button class="send-message btn btn-success" style="background-color: #089bab;">Send Message</button>
-        </div> <!-- End of Contact --> 
       </div>
-    </div> <!-- End of item Sidebar --> 
-    <div class="col-md-8 col-sm-8 col-8" style="height: 100%;"> 
-      <div class="input-group flex-nowrap mt-3">
-      <span class="input-group-text" id="addon-wrapping"><i class="bi bi-search"></i></span>
-      <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="addon-wrapping">
-    </div> <!-- End of Input --> 
-    <div class="row">
-      <div class="col-md-11 col-sm-12 col-12 mt-3 mb-2 ml-4" id="quotes">
-        <p></p>
-        <h3 class="text-dark"><strong>AI Jobs</strong></h3>
-        <p style="font-size: 13px;">Adalah sejumlah aktivitas S🅰️🚀  dalam melakukan pekerjaan. 
-        AI Job juga bisa digunakan team teaching untuk melihat pekerjaan
-        yang sudah dilalui oleh Anak didiknya.</p>
-      </div>
-    </div>  
-    <div class="row">
-      <div class="col-md-11 col-sm-12 mt-2">
-        <button class="btn btn-success" style="background-color: #66CDAA; font-size: 14px;">View All</button>
-      </div>
+    <h4 class="text-white ml-5 mt-1 pl-1"><strong><i class="bi bi-person-circle"></i></strong></h4>
+    
+    <strong class="text-white mb-1"><a href="AI.html" style="text-decoration: none; color: white;"><i class="bi bi-door-closed"></i> Logout</a></strong>
+
+    </nav>
+    <!-- Akun -->
+    <div id="akun">
+    <div class="text-center mt-3">
+        <img src="./assets/agung.jpg"  width="230px" alt="" id="karakter">
+        <h4 class="mt-3"><strong>Agung Yudo Ardianto</strong></h4>
+        <strong><p>ABC Move (180)</p></strong>
     </div>
-
-    <div class="row mt-3 d-flex justify-content-center" id="card-row"> <!-- Card Row 1 -->
-      <div class="col-md-4 col-sm-4 mb-3 col-12">
-      <div class="card" style="max-width: 250px;">
-      <div id="backgroundCard">
-      <div class="d-flex justify-content-center">
-      <img src="./assets/agung.jpeg" class="rounded-circle" style="max-width: 100px; margin-top: 40px;" alt="Cinque Terre">
-      </div>
-      </div>
-      <div class="card-body">
-      <br>
-      <b>ABC Move</b>
-      <p style="font-size: 12px">Agung Yudo Ardianto</p>
-      <button class="btn btn-success" style="background-color: #66CDAA; font-size: 14px;"><a href="user.html">Open</a></button>
-      </div></div></div>
-
-      <div class="col-md-4 col-sm-4 mb-3 col-12">
-      <div class="card" style="max-width: 250px;">
-      <div id="backgroundCard">
-      <div class="d-flex justify-content-center">
-      <img src="./assets/raihan.jpeg" class="rounded-circle" style="max-width: 100px; margin-top: 40px;" alt="Cinque Terre">
-      </div>
-      </div>
-      <div class="card-body">
-      <br>
-      <b>Meraih</b>
-      <p style="font-size: 12px">Raihan</p>
-      <button class="btn btn-success" style="background-color: #66CDAA; font-size: 14px;"><a href="user.html">Open</a></button>
-      </div></div></div>
-
-      <div class="col-md-4 col-sm-4 mb-3 col-12">
-      <div class="card" style="max-width: 250px;">
-      <div id="backgroundCard">
-      <div class="d-flex justify-content-center">
-      <img src="./assets/muchlish.jpeg" class="rounded-circle" style="max-width: 100px; margin-top: 40px;" alt="Cinque Terre">
-      </div>
-      </div>
-      <div class="card-body">
-      <br>
-      <b>ABC Move</b>
-      <p style="font-size: 12px">Muchlishina Madani</p>
-      <button class="btn btn-success" style="background-color: #66CDAA; font-size: 14px;"><a href="user.html">Open</a></button>
-      </div></div></div>
-    </div> <!-- End of Card Row 1 -->
-
-      <div class="row mt-3" id="card-row"> <!-- Card Row 2 -->
-      <div class="col-md-4 col-sm-4 mb-3 col-12">
-      <div class="card" style="max-width: 250px;">
-      <div id="backgroundCard">
-      <div class="d-flex justify-content-center">
-      <img src="./assets/sabda.jpeg" class="rounded-circle" style="max-width: 100px; margin-top: 40px;" alt="Cinque Terre">
-      </div>
-      </div>
-      <div class="card-body">
-      <br>
-      <b>Sab's Job</b>
-      <p style="font-size: 12px">Sabda</p>
-      <button class="btn btn-success" style="background-color: #66CDAA; font-size: 14px;"><a href="user.html">Open</a></button>
-      </div></div></div>
-
-      <div class="col-md-4 col-sm-4 mb-3 col-12">
-      <div class="card" style="max-width: 250px;">
-      <div id="backgroundCard">
-      <div class="d-flex justify-content-center">
-      <img src="./assets/komang.jpeg" class="rounded-circle" style="max-width: 100px; margin-top: 40px;" alt="Cinque Terre">
-      </div>
-      </div>
-      <div class="card-body">
-      <br>
-      <b>Job Kipap</b>
-      <p style="font-size: 12px">I Komang Mertayasa</p>
-      <button class="btn btn-success" style="background-color: #66CDAA; font-size: 14px;"><a href="user.html">Open</a></button>
-      </div></div></div>
-
-      <div class="col-md-4 col-sm-4 mb-3 col-12">
-      <div class="card" style="max-width: 250px;">
-      <div id="backgroundCard">
-      <div class="d-flex justify-content-center">
-      <img src="./assets/alfian.jpeg" class="rounded-circle" style="max-width: 100px; margin-top: 40px;" alt="Cinque Terre">
-      </div>
-      </div>
-      <div class="card-body">
-      <br>
-      <b>Vi Jobs</b>
-      <p style="font-size: 12px">Alfian</p>
-      <button class="btn btn-success" style="background-color: #66CDAA; font-size: 14px;"><a href="user.html">Open</a></button>
-      </div></div></div>
-
-    </div> <!-- End of Card Row 2 -->
-
-
-    </div> <!-- End Row  -->
-
-
-
-    <div class="col-md-2 col-sm-12" style="background-color: #089bab; box-shadow: 0 0 7px 2px #00BFFF;" id="lastCol"> <!-- Sidebar 3 -->
-      <div class="leaderboard-fluid ml-1"> <!-- Leaderboard -->
-        <div class="row mt-3">
-          <div class="col-md-3 col-sm-3 mt-2">
-            <p class="text-white"><b>Leaderboard</b></p>
-          </div>
-          <div class="col-md-19 col-sm-4 pl-5" style="margin-left: 20px">
-            <button class="btn btn-light mt-1" style="font-size: 11px; color: grey;"><b>View All</b></button>
-          </div>
-        </div>
-      </div> <!-- End of Leaderboard -->
-      <div class="leaderboard-item mt-4">
-        <div class="row">
-          <div class="col-md-1">
-            <i class="bi bi-trophy-fill" style="color: #eeff00;"></i>
-          </div>
-          <div class="col-md-2">
-            <img src="./assets/agung.jpeg" width="40px;" id="leaderboard-img"> 
-          </div>
-          <div class="col-md-7 ml-3">
-            <p class="text-white" style="font-size: 12px;"><b>Agung Yudo Ardianto</b></p>
-          </div>
-          <div class="col-md-4">
-            <button class="btn btn-success" style="background-color: #66CDAA; font-size: 14px;">1000 Jobs</button>
-          </div>
-          <div class="col-md-12"><hr></div>
-        </div>
-      </div> <!-- End of Leaderboard-Item 1-->
-
-      <div class="leaderboard-item mt-4">
-        <div class="row">
-          <div class="col-md-1">
-            <i class="bi bi-trophy-fill" style="color: #eeff00;"></i>
-          </div>
-          <div class="col-md-2">
-            <img src="./assets/raihan.jpeg" width="40px;" id="leaderboard-img"> 
-          </div>
-          <div class="col-md-7 ml-3">
-            <p class="text-white" style="font-size: 12px;"><b>Raihan</b></p>
-          </div>
-          <div class="col-md-12"><hr></div>
-          <div class="col-md-4">
-           <button class="btn btn-success" style="background-color: #66CDAA; font-size: 14px;">900 Jobs</button>
-          </div>
-        </div>
-      </div> <!-- End of Leaderboard-Item 1-->
-
-      <div class="leaderboard-item mt-4">
-        <div class="row">
-          <div class="col-md-1 col-1">
-            <i class="bi bi-trophy-fill" style="color: #eeff00;"></i>
-          </div>
-          <div class="col-md-2 col-2">
-            <img src="./assets/sabda.jpeg" width="40px;" id="leaderboard-img"> 
-          </div>
-          <div class="col-md-7 ml-3 col-3">
-            <p class="text-white" style="font-size: 12px;"><b>Sabda Maulana</b></p>
-          </div>
-          <div class="col-md-12"><hr></div>
-          <div class="col-md-4">
-            <button class="btn btn-success" style="background-color: #66CDAA; font-size: 14px;">800 Jobs</button>
-          </div>
-        </div>
-      </div> <!-- End of Leaderboard-Item 1-->
-
-
-    </div> <!-- End of col3 -->
-
-  </div> <!-- End of Row -->
-</div> <!-- End of Container  -->
-<script>
-
-  var today = new Date().getHours();
-  if (today >= 6 && today <= 19) {
-  document.getElementById('').style.backgroundImage = "url('konoha.jpeg')";
-  } else {
-    document.body.style.background = "Blue";
-  }
-
-</script>
+  </div>
+    <!-- End of Akun -->
+    <!-- Table -->  
+    <div class="table" id="table">
+    <button class="btn btn-success mt-2" id="button" @click="button" v-if='!table'>Open</button>
+    <button class="btn btn-danger mt-2" id="button" @click="button" v-else='table'>Close</button>
+    <br>
+    <br>
+  <div id="input" v-if="table"> <!-- Input -->
+    <input type="text" placeholder=" Nama Job" v-model="namaJob"><input type="text" placeholder=" Link Bukti" v-model="link">
+    <button class="btn btn-success" @click="submitJobs">Input</button>
+    </div> <!-- End of Input -->
+    <table width="90%" id="tablenya" class="mt-4" v-if="table">
+        <tr>
+          <th>No</th>
+          <th>Nama Job</th>
+          <th>Bukti</th>
+        </tr>
+      <tbody>
+        <tr v-for="job in jobs">
+          <td>{{ job.id }}</td>
+          <td>{{ job.namaJob }}</td>
+          <td><a href="job.link">LINK</a></td>
+        </tr>
+      </tbody>
+    </table>      
+</div>  
+<!-- End of Table -->
+<script src="user.js"></script>
 </body>
 </html>
