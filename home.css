@@ -69,7 +69,6 @@ color: white;
 }
 
 #backgroundCard{
-	background-image: url(./assets/konoha.jpeg);
 	background-size: cover;
 	height: 180px;
 	box-shadow: 0 0 7px 2px #00BFFF;
