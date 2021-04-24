@@ -28,7 +28,7 @@ table{
     background-color: rgb(41, 168, 130);
 }
 table th {
-    background: rgb(41, 168, 130);
+    background: #089bab;
     color: white;
     font-weight:bold;
     font-size:15px;
@@ -55,7 +55,7 @@ table tr:nth-child(even) {
     margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
-    border: 1px solid rgb(41, 168, 130);
+    border: 1px solid #089bab;
     box-sizing: border-box;
 }
 
