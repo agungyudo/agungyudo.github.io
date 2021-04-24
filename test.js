@@ -1,6 +1,6 @@
  //  Siang dan Malam 
   jam = new Date().getHours();
-  if (jam >= 0 && jam <= 3) {
+  if (jam >= 5 && jam <= 17) {
   document.getElementById('backgroundCard').style.backgroundImage = "url('./assets/konoha.jpeg')";
   } else {
     document.getElementById('backgroundCard').style.backgroundImage = "url('./assets/konohamidnight.jpeg')";
