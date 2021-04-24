@@ -26,12 +26,3 @@ const table = Vue.createApp({
 })
 
 table.mount('#table')
-
-
-
-
-const button = document.getElementById('button')
-
-
-
-
