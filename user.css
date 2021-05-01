@@ -1,32 +1,43 @@
-#karakter{
-    border-radius: 100%;
+body{
+	background-color: #eff7f8;
+	background-size: cover;
+	font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-body {
-  background-image: url(assets/background2.jpg);
-  background-color: #f8ffff;
-  background-size: cover;
-  background-attachment: fixed;
-  line-height: 1.25;
+#navbar{
+	border-radius: 20px;
 }
-#table i{
-    margin-left: 88%;
+
+#sidebar{
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
-.tabletutup{
-    display: none;
+
+.item-sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  height: 100%;
+  overflow: auto;
 }
-table{
-    margin-left: 5%;
-    border-collapse:collapse;
-    font:normal normal 12px Verdana,Arial,Sans-Serif;
-    color:#333333;
+
+ul a{
+	transition: 0.5s;
+	border-radius: 20px;
 }
-#button{
-    margin-left: 48%;
+
+ul a:hover {
+border-radius: 20px;
+width: 100%;
+background-color: lightblue;
+color: white;
 }
-.dropdown a:hover{
-    background-color: rgb(41, 168, 130);
+
+#sidebar a {
+  text-decoration: none;
+  color: white;
 }
+
 table th {
     background: #089bab;
     color: white;
@@ -35,7 +46,7 @@ table th {
     text-align: center;
 }
 table td {
-    font-size: 15px;
+    font-size: 17px;
     vertical-align:top;
     padding:5px 10px;
     border:1px solid #eaeaea;
@@ -47,9 +58,6 @@ table tr:nth-child(even) {
     background:#F0F8FF;
 }
 /* Input CSS */
-#input {
-    margin-left: 33%;
-}
 #input input{
     height: 33px;
     margin-right: 10px;
@@ -59,25 +67,92 @@ table tr:nth-child(even) {
     box-sizing: border-box;
 }
 
-/* Mobile */
-@media (min-width: 321px) and (max-width: 736px) {
-    body{
-        background-color: #E0FFFF;
-        background-size: cover;
-        background-attachment: fixed;
-    }
-    table{
-        margin-left: 0;
-        width: 100%;
-    }
-    h4{
-        font-size: 18px;
-    }
-    #button{
-        margin-left: 43%;
-    }
-    #input {
-        margin-left: 23%;
-    }
+.contact{
+	background-color: #f5f5f5;
+	height: 130px;
+	border-radius: 20px;
 }
 
+/* Bar */
+.progress-bar {
+    background-color: lightblue;
+    height: 33px;
+    padding: 5px;
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px cyan inset, 0 1px 0 cyan;
+  }
+
+  .progress-bar span {
+    display: inline-block;
+    height: 100%;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    transition: width .4s ease-in-out;
+  }
+  .blue span {
+    background-color: #34c2e3;
+  }
+
+  .orange span {
+    background-color: #fecf23;
+    background-image: linear-gradient(top, #fecf23, #fd9215);
+  }
+
+  .green span {
+    background-color: #a5df41;
+    background-image: linear-gradient(top, #a5df41, #4ca916);
+  }
+  .stripes span {
+    background-size: 30px 30px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, .15) 25%,
+                      transparent 25%,
+                      transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%,
+                      transparent 75%, transparent);
+    animation: animate-stripes 3s linear infinite;
+  }
+
+  @keyframes animate-stripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 60px 0;
+    }
+  }
+  
+  @media (min-width:200px) and (max-width:576px){
+    .item-sidebar, a{
+      display: inline-block;
+      font-size: 12px;
+    }
+    #nama_job{
+      margin-bottom: 7px;
+    }
+    .contact{
+      width: 80px;
+      height: 120px;
+      margin-left: -10px;	
+    }
+    .card{
+      width: 240px;
+    }
+    #kyubi{
+      width: 90px;
+    }
+    #contactText{
+      font-size: 10px;
+    }
+    .send-message{
+      font-size: 7.3px;
+    }
+    #button, #input{
+      margin-left: -60px;
+    }
+    #tablenya{
+      margin-left: -50px;
+    }
+    #lastCol{
+      display: none;
+    }
+  }
