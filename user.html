@@ -1,72 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="./assets/kyubi.png"/>
     <link rel="stylesheet" href="user.css">
-    <script src="https://unpkg.com/vue@3.0.2"></script>
-    <title>User</title>
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark mb-2" style="background-color: #089bab; height: 52px;">
-    <div class="dropdown">
-        <a class="dropdown-toggle" href="#" srole="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false"
-        style="color: white; font-size: 30px;">
-        </a>  
-        <ul class="dropdown-menu mt-1" aria-labelledby="dropdownMenuLink" style="width: 100px; height: 179px; 
-        background-color: rgb(41, 168, 130); font-size: 15px; margin-left: -17px; margin-top: 5px; border-radius: 0; border: 0px;">
-          <li><a class="dropdown-item pt-2" href="home.html" style="color: white;"><strong><i class="bi bi-house-door-fill text-white mr-2"></i>Home</strong></a></li>
-          <hr>
-          <li><a class="dropdown-item" href="#" style="color: white;"><strong><i class="bi bi-people-fill text-white mr-2"></i>Groups</strong></a></li>
-          <hr>
-          <li><a class="dropdown-item" href="#" style="color: white;"><strong><i class="bi bi-hand-thumbs-up-fill text-white mr-2"></i>Rank</strong></a></li>
+<div class="container-fluid" id="profile">
+<div class="row">
+	<div class="col-md-2 col-sm-2 col-3" style="background-color: #089bab; box-shadow: 0 0 7px 2px #00BFFF; height: 100vh;" id="sidebar">
+		<div class="d-flex justify-content-center mt-2"><img src="./assets/kyubi.png" style="max-width: 7em;" id="kyubi"></div>
+        <div class="mt-3 d-flex justify-content-center" id="item-sidebar">
+          <ul class="nav flex-column">
+          <li class="nav-item mb-4">
+            <a class="nav-link active" aria-current="page" href="home.html"><i class="bi bi-border-all tex" id="linkHome"></i> Home</a>
+          </li>
+          <li class="nav-item mb-4">
+            <a class="nav-link" href="user.html"><i class="bi bi-person-fill"></i> Profile</a>
+          </li>
+          <li class="nav-item mb-4">
+            <a class="nav-link" href="group.html"><i class="bi bi-people-fill"></i> Groups</a>
+          </li>
+          <li class="nav-item mb-4">
+            <a class="nav-link" href="AI.html"><i class="bi bi-door-closed"></i> Logout</a>
+          </li>
         </ul>
-      </div>
-    <h4 class="text-white ml-5 mt-1 pl-1"><strong><i class="bi bi-person-circle"></i></strong></h4>
-    
-    <strong class="text-white mb-1"><a href="AI.html" style="text-decoration: none; color: white;"><i class="bi bi-door-closed"></i> Logout</a></strong>
+        </div> 
+        <div class="contact text-center text-white mt-3">
+          <br>
+           <b class="text-dark" id="contactText">Contact Us</b>
+           <br>
+           <br>
+           <button class="send-message btn btn-info" style="background-color: #089bab;">Send Message</button>
+        </div> <!-- End of Contact --> 
+	</div>
+	<div class="col-md-10 col-9">
+		<div class="row mt-2">
+			<div class="col-md-7 col-12 mb-4">
+				<div class="card text-center" id="aboutme">
+	        <div class="card-header bg-info text-white" style="box-shadow: 0 0 1px 2px #00BFFF;">
+	          <strong style="font-size: 17px;">About Me</strong>
+	        </div>
+	        <div class="card-body">
+	          <img src="./assets/agung.jpeg" class="rounded-circle" style="max-width: 120px; margin-top: -10px;">
+	          <p class="card-text mt-2">Agung Yudo Ardianto</p>
+	          <a href="#" class="btn btn-info" id="nama_job">ABC Move</a> <a href="#" class="btn btn-primary">PIC of Attendx</a>
+	        </div>
+	      </div>
+			</div>
+				<div class="col-md-5 col-12">
+				<div class="card text-center" style="height: 282.5px;">
+		        <div class="card-header bg-info text-white" style="box-shadow: 0 0 1px 2px #00BFFF;">
+		          <strong style="font-size: 17px;">Rank</strong>
+		        </div>
+		        <div class="card-body">
+		          <img class="mb-1" :src="rank" style="max-width: 100px;">
+              <div class="d-flex justify-content-center mb-1">
+                <div style="width: 55%; height: 24px; background-color: #089bab; border-radius: 25px;"><b class="text-white">{{ namaRank }}</b></div>
+              </div>
+              <div class="d-flex justify-content-center">
+              <div style="width: 55%; height: 24px; background-color: #00BFFF; border-radius: 25px;"><b class="text-white">{{ jumlah }} Jobs</b></div>
+            </div>
+            <!-- Bar -->
+            <div class="progress-bar blue stripes mt-2">
+              <span :style="{width : bar + '%'}">{{ bar + '%' }}</span>
+            </div>
+            <!-- End of Bar -->
+		        </div>
+		      </div>
+			</div>
+		</div>
 
-    </nav>
-    <!-- Akun -->
-    <div id="akun">
-    <div class="text-center mt-3">
-        <img src="./assets/agung.jpg"  width="230px" alt="" id="karakter">
-        <h4 class="mt-3"><strong>Agung Yudo Ardianto</strong></h4>
-        <strong><p>ABC Move (180)</p></strong>
-    </div>
-  </div>
-    <!-- End of Akun -->
-    <!-- Table -->  
-    <div class="table" id="table">
-    <button class="btn btn-info mt-2" id="button" @click="button" v-if='!table'>Open</button>
+		<div class="row mt-3">
+			<div class="col-md-12 text-center">
+			 <div class="table" id="table">
+    <button class="btn btn-info mt-2" id="button" @click="button" v-if='!table'>Open Job!</button>
     <button class="btn btn-danger mt-2" id="button" @click="button" v-else='table'>Close</button>
     <br>
     <br>
   <div id="input" v-if="table"> <!-- Input -->
-    <input type="text" placeholder=" Nama Job" v-model="namaJob" v-on:keyup.enter="submitJobs"><input type="text" placeholder=" Link Bukti" v-model="link" v-on:keyup.enter="submitJobs">
+    <input type="text" placeholder=" Nama Job" v-model="namaJob" v-on:keyup.enter="submitJobs"><input type="text" placeholder=" Link Bukti" v-model="status" v-on:keyup.enter="submitJobs">
     <button class="btn btn-info" @click="submitJobs">Input</button>
     </div> <!-- End of Input -->
-    <table width="90%" id="tablenya" class="mt-4" v-if="table">
+    <table width="100%" id="tablenya" class="mt-4" v-if="table">
         <tr>
           <th>No</th>
-          <th>Nama Job</th>
-          <th>Bukti</th>
+          <th>Love Code</th>
+          <th>Job</th>
+          <th>Status</th>
+          <th>Tanggal</th>
         </tr>
       <tbody>
         <tr v-for="job in jobs" :key="job.id">
           <td>{{ job.id }}</td>
-          <td>{{ job.namaJob }}</td>
-          <td><a href="job.link">LINK</a></td>
+          <td>{{ job.lovecode }}</td>
+          <td>{{ job.nama_job }}</td>
+          <td>{{ job.status }}</td>
+          <td>{{ job.tanggal }}</td>
         </tr>
       </tbody>
     </table>      
 </div>  
-<!-- End of Table -->
-<script src="user.js"></script>
+			</div>
+		</div>
+</div>
+</div>
+</div> <!-- End of Row 1 -->
+</div> <!-- End of Container-Fluid  -->
+
 </body>
+<script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue@3.0.2"></script>
+<script src="user.js"></script>
+
 </html>
